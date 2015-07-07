@@ -15,12 +15,16 @@ class Atwix_PVF_Block_Adminhtml_Widget_Button extends Mage_Adminhtml_Block_Widge
         $this->_product = Mage::registry('current_product');
         parent::_construct();
         $this->setData(array(
-            'label'     => Mage::helper('catalog')->__('View Product Page'),
-            'onclick'   => 'window.open(\''.Mage::getModel('core/url')->getUrl() . $this->_product->getUrlPath() .'\')',
+            // Shortened button text
+            'label'     => Mage::helper('catalog')->__('View Product'),
+            // Changed URL so '/index.php' is excluded from path
+            'onclick'   => 'window.open(\'' . Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . $this->_product->getUrlPath() .'\')',
             'disabled'  => !$this->_isVisible(),
             'title' => (!$this->_isVisible())?
-                Mage::helper('catalog')->__('Product is not visible on frontend'):
-                Mage::helper('catalog')->__('View Product Page')
+                // Clearer copy for when product button is disabled due to product status set to "disabled"
+                Mage::helper('catalog')->__('(Product Status is set to Disabled)'):
+                // Shorter copy to match button text
+                Mage::helper('catalog')->__('View Product')
         ));
     }
 
