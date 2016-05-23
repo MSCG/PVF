@@ -1,0 +1,12 @@
+{
+  "name": "atwix/pvf",
+  "license": "OSL-3.0",
+  "type":"magento-module",
+  "description": "Atwix Product View Frontend Button",
+  "authors": [
+    {
+      "name": "Nick Kravchuk"
+    }
+  ],
+  "homepage": "https://github.com/Atwix/PVF"
+}
