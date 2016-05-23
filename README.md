@@ -1,10 +1,10 @@
-Atwix Product View Frontend Button
+Atwix Preview Frontend Button
 =====================
-Add product view button in admin
+Add Preview button in admin
 
 Facts
 -----
-- version: 0.0.1
+- version: 0.0.2
 - extension key: Atwix_PVF
 - [extension on GitHub](https://github.com/Atwix/PVF)
 
@@ -36,6 +36,9 @@ Developer
 Nick Kravchuk  
 [@furyruf](https://twitter.com/furyruf)
 
+Pascal Querner
+[@pquerner](https://github.com/pquerner)
+
 Licence
 -------
 [OSL - Open Software Licence 3.0](http://opensource.org/licenses/osl-3.0.php)
@@ -43,3 +46,5 @@ Licence
 Copyright
 ---------
 (c) 2013 Atwix
+
+(c) 2016 MSCG - creative group (mscg.de)
