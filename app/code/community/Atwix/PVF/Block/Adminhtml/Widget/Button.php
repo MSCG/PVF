@@ -37,15 +37,11 @@ class Atwix_PVF_Block_Adminhtml_Widget_Button extends Mage_Adminhtml_Block_Widge
      */
     protected function _getUrl()
     {
+        $store_url = Mage::app()->getStore(2) //TODO dont hardcode store view id
+        ->getBaseUrl(Mage_Core_Model_Store::URL_TYPE_LINK);
         if ($this->_object instanceof Mage_Catalog_Model_Product) {
-            $store_url = Mage::app()->getStore(2) //TODO dont hardcode store view id
-            ->getBaseUrl(Mage_Core_Model_Store::URL_TYPE_LINK);
-
             return $store_url . $this->generateUrl('product', $this->_object->getId());
         } else if ($this->_object instanceof Mage_Catalog_Model_Category) {
-            $store_url = Mage::app()->getStore(2) //TODO dont hardcode store view id
-                ->getBaseUrl(Mage_Core_Model_Store::URL_TYPE_LINK);
-
             return $store_url . $this->generateUrl('category', $this->_object->getId());
         } else {
             return '';
